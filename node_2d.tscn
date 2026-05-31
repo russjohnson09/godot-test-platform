@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dc5qrdx3dcwjh" path="res://node_2d.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://denyomy7vetvv" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://do54akr1q0ljq" path="res://objects/box.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://c6xba833qi0ku" path="res://objects/static_box.tscn" id="4_0hol4"]
 
 [node name="Node2D" type="Node2D" unique_id=614202188]
 script = ExtResource("1_0e48y")
@@ -9,3 +11,16 @@ script = ExtResource("1_0e48y")
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1689847405]
 position = Vector2(91, 100)
 texture = ExtResource("1_wtcfe")
+
+[node name="Box2" parent="." unique_id=920231610 instance=ExtResource("3_epypp")]
+position = Vector2(408, 342)
+
+[node name="Box" parent="." unique_id=1896041589 instance=ExtResource("3_epypp")]
+position = Vector2(358, 472)
+
+[node name="StaticBox" parent="." unique_id=320756778 instance=ExtResource("4_0hol4")]
+position = Vector2(640, 604)
+scale = Vector2(20, 1)
+
+[node name="Box3" parent="." unique_id=1356505276 instance=ExtResource("3_epypp")]
+position = Vector2(452, 211)
