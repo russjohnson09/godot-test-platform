@@ -4,6 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://denyomy7vetvv" path="res://icon.svg" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://do54akr1q0ljq" path="res://objects/box.tscn" id="3_epypp"]
 [ext_resource type="PackedScene" uid="uid://c6xba833qi0ku" path="res://objects/static_box.tscn" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://dvhlspfnan2ir" path="res://objects/moving/moving_platform_horizontal.tscn" id="5_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://b3jjoyw0qkol3" path="res://objects/moving/moving_platform_horizontal_player.tscn" id="6_kdubu"]
+[ext_resource type="PackedScene" uid="uid://d3n262wfxlfdo" path="res://objects/box_small.tscn" id="7_d21ai"]
+[ext_resource type="PackedScene" uid="uid://c2y6th8pd4stu" path="res://objects/box_small_bouncy.tscn" id="8_rj586"]
+[ext_resource type="PackedScene" uid="uid://r26eexpdvt7o" path="res://characters/player.tscn" id="9_4d7sh"]
 
 [node name="Node2D" type="Node2D" unique_id=614202188]
 script = ExtResource("1_0e48y")
@@ -24,3 +29,30 @@ scale = Vector2(20, 1)
 
 [node name="Box3" parent="." unique_id=1356505276 instance=ExtResource("3_epypp")]
 position = Vector2(452, 211)
+
+[node name="MovingPlatformHorizontal" parent="." unique_id=1148700567 instance=ExtResource("5_q6r6c")]
+position = Vector2(318, 53)
+
+[node name="Box4" parent="." unique_id=1467102265 instance=ExtResource("3_epypp")]
+position = Vector2(674, 154)
+
+[node name="MovingPlatformHorizontal2" parent="." unique_id=1354338686 instance=ExtResource("6_kdubu")]
+position = Vector2(582, 299)
+
+[node name="Box5" parent="." unique_id=823522750 instance=ExtResource("7_d21ai")]
+position = Vector2(679, 47)
+
+[node name="BoxSmall2" parent="." unique_id=875087758 instance=ExtResource("7_d21ai")]
+position = Vector2(912, 332)
+
+[node name="BoxSmall3" parent="." unique_id=1639254623 instance=ExtResource("7_d21ai")]
+position = Vector2(837, 370)
+
+[node name="BoxSmall4" parent="." unique_id=1617099019 instance=ExtResource("7_d21ai")]
+position = Vector2(886, 410)
+
+[node name="BoxSmallBouncy" parent="." unique_id=1812225969 instance=ExtResource("8_rj586")]
+position = Vector2(839, 286)
+
+[node name="Player" parent="." unique_id=153500207 instance=ExtResource("9_4d7sh")]
+position = Vector2(161, 437)

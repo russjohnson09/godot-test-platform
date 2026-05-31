@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c2y6th8pd4stu"]
+
+[ext_resource type="Texture2D" uid="uid://denyomy7vetvv" path="res://icon.svg" id="1_sjbsm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sjbsm"]
+friction = 0.5
+bounce = 1000000000.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bctmu"]
+size = Vector2(126, 128)
+
+[node name="BoxSmallBouncy" type="RigidBody2D" unique_id=920231610]
+physics_material_override = SubResource("PhysicsMaterial_sjbsm")
+gravity_scale = 0.25
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1609411634]
+position = Vector2(-3, -2)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_sjbsm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=238395670]
+position = Vector2(-3, -2)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_bctmu")
