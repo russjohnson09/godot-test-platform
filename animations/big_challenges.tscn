@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bgpypckk6nbrq"]
+
+[ext_resource type="Texture2D" uid="uid://y722jcu8y6or" path="res://assets/big_challenges/big_challenges_1.png" id="1_jvvag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wa8w"]
+atlas = ExtResource("1_jvvag")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7uac"]
+atlas = ExtResource("1_jvvag")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xua1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wa8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7uac")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BigChallenges" type="Node2D" unique_id=981738332]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=695598769]
+sprite_frames = SubResource("SpriteFrames_xua1k")
+autoplay = "default"

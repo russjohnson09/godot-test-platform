@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://da6dh8nk8qtnf"]
+
+[ext_resource type="Script" uid="uid://ck7fsx73200st" path="res://scenes/input.gd" id="1_1feld"]
+[ext_resource type="Script" uid="uid://cbk6qiywwnv08" path="res://scenes/draw.gd" id="1_166at"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1feld"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Draw" type="Node2D" unique_id=362244973 node_paths=PackedStringArray("drawer")]
+script = ExtResource("1_1feld")
+drawer = NodePath("SubViewport/Node2D")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1459382939]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(960, 540)
+render_target_clear_mode = 2
+
+[node name="Node2D" type="Node2D" parent="SubViewport" unique_id=1759856270]
+script = ExtResource("1_166at")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356582190]
+texture = SubResource("ViewportTexture_1feld")
+centered = false
