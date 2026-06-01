@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cne8h4w25wk30"]
+
+[ext_resource type="Texture2D" uid="uid://b5mf7fqidii2e" path="res://hello/level/obstacle.png" id="1_eqeae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1bpp"]
+size = Vector2(16, 16)
+
+[node name="MovingPlatform1" type="CharacterBody2D" unique_id=1643453560]
+position = Vector2(184, 152)
+metadata/_edit_group_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=225245037]
+shape = SubResource("RectangleShape2D_s1bpp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1497466247]
+modulate = Color(0.4, 2, 0.8, 1)
+texture = ExtResource("1_eqeae")

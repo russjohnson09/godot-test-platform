@@ -7,11 +7,22 @@ const JUMP_SPEED = 200
 
 const PUSH_FORCE = 80.0
 
+signal screen_exited
+
 @onready var gravity := float(ProjectSettings.get_setting("physics/2d/default_gravity"))
 
+#@export var combat_actor: PackedScene
+
+#@export var input_scene: PackedScene = preload("res://levels/input.tscn")
+
+#var input = input_scene.instantiate()
+
+@export var input: Node2D
+
 func _physics_process(delta: float) -> void:
+	var walk_direction: float = input.get_axis_x()
 	# Horizontal movement code. First, get the player's input.
-	var walk := WALK_FORCE * (Input.get_axis(&"move_left", &"move_right"))
+	var walk := WALK_FORCE * walk_direction
 	# Slow down the player if they're not trying to move.
 	if abs(walk) < WALK_FORCE * 0.2:
 		# The velocity, slowed down a bit, and then reassigned.
@@ -37,5 +48,10 @@ func _physics_process(delta: float) -> void:
 				c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
 
 	# Check for jumping. is_on_floor() must be called after movement code.
-	if is_on_floor() and Input.is_action_just_pressed(&"jump"):
+	if is_on_floor() and input.is_action_just_pressed(&"jump"):
 		velocity.y = -JUMP_SPEED
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	emit_signal("screen_exited")
+	pass # Replace with function body.

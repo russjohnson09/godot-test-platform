@@ -15,7 +15,3 @@ texture = ExtResource("2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=209433601]
 position = Vector2(-0.315559, 0.157784)
 shape = SubResource("1")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1056686619]
-
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
