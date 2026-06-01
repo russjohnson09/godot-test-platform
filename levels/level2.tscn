@@ -21,6 +21,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(148, 391)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MovingPlatform2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(83, 389)]
+}
 
 [sub_resource type="Animation" id="Animation_g1dg4"]
 resource_name = "new_animation"
@@ -38,6 +50,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(148, 391), Vector2(151, 303)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MovingPlatform2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(84, 391), Vector2(128, 352)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s1bpp"]
 _data = {
@@ -53,6 +77,7 @@ tile_map_data = PackedByteArray("AAAAABkAAAAAAAAAAAABABkAAAAAAAAAAAACABkAAAAAAAA
 tile_set = ExtResource("1_raxm7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=720283466]
+visible = false
 anchor_mode = 0
 
 [node name="Player" parent="." unique_id=214142706 node_paths=PackedStringArray("input") instance=ExtResource("3_qyb5k")]
@@ -65,6 +90,9 @@ position = Vector2(322, 225)
 [node name="MovingPlatform1" parent="." unique_id=1643453560 instance=ExtResource("5_g1dg4")]
 position = Vector2(148, 391)
 
+[node name="MovingPlatform2" parent="." unique_id=841983960 instance=ExtResource("5_g1dg4")]
+position = Vector2(83, 389)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=223782117]
 libraries/ = SubResource("AnimationLibrary_s1bpp")
 autoplay = &"new_animation"
@@ -72,4 +100,27 @@ autoplay = &"new_animation"
 [node name="Input" parent="." unique_id=1057886849 instance=ExtResource("7_76ugp")]
 position = Vector2(22, 29)
 
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1966289324]
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 67.0
+offset_bottom = 35.0
+focus_mode = 1
+focus_behavior_recursive = 1
+selected = 2
+item_count = 6
+popup/item_0/text = "100"
+popup/item_0/id = 0
+popup/item_1/text = "200"
+popup/item_1/id = 1
+popup/item_2/text = "300"
+popup/item_2/id = 5
+popup/item_3/text = "400"
+popup/item_3/id = 2
+popup/item_4/text = "800"
+popup/item_4/id = 3
+popup/item_5/text = "1600"
+popup/item_5/id = 4
+
 [connection signal="screen_exited" from="Player" to="." method="_on_player_screen_exited"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
