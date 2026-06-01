@@ -18,3 +18,8 @@ https://docs.godotengine.org/en/stable/tutorials/physics/kinematic_character_2d.
 
 
 https://github.com/godotengine/godot-demo-projects/tree/master/2d/kinematic_character
+
+So I guess the use of CharacterBody2D is exactly what is done in this demo project ^^. Strange that the docs make it seem like this type is useful only for actual playable characters.
+
+
+Also it uses AnimationPlayer to change the position and not PathFollow2D. This is actually easier for me to follow anyways. and results in the CharacterBody2D being the root with AnimationPlayer being the child. This is all much easier to follow.

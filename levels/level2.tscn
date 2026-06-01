@@ -1,0 +1,18 @@
+[gd_scene format=4 uid="uid://rfq34rb7linl"]
+
+[ext_resource type="Script" uid="uid://ye733itl1kvi" path="res://levels/level_2.gd" id="1_p1d34"]
+[ext_resource type="TileSet" uid="uid://cc1pgax7wr6k8" path="res://tileset/debug.tres" id="1_raxm7"]
+[ext_resource type="PackedScene" uid="uid://bnkypsa1y5kkm" path="res://player/player.tscn" id="3_qyb5k"]
+
+[node name="Level2" type="Node2D" unique_id=417868967]
+script = ExtResource("1_p1d34")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1101587369]
+tile_map_data = PackedByteArray("AAAAABkAAAAAAAAAAAABABkAAAAAAAAAAAACABkAAAAAAAAAAAADABkAAAAAAAAAAAAEABkAAAAAAAAAAAAFABkAAAAAAAAAAAAGABkAAAAAAAAAAAAHABkAAAAAAAAAAAAIABkAAAAAAAAAAAAJABkAAAAAAAAAAAAKABkAAAAAAAAAAAALABkAAAAAAAAAAAAMABkAAAAAAAAAAAANABkAAAAAAAAAAAAOABkAAAAAAAAAAAAPABkAAAAAAAAAAAAQABkAAAAAAAAAAAARABkAAAAAAAAAAAASABkAAAAAAAAAAAATABkAAAAAAAAAAAAUABkAAAAAAAAAAAAVABkAAAAAAAAAAAAWABkAAAAAAAAAAAAXABkAAAAAAAAAAAAYABkAAAAAAAAAAAAZABkAAAAAAAAAAAAaABkAAAAAAAAAAAAbABkAAAAAAAAAAAAcABkAAAAAAAAAAAA=")
+tile_set = ExtResource("1_raxm7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=720283466]
+anchor_mode = 0
+
+[node name="Player" parent="." unique_id=214142706 instance=ExtResource("3_qyb5k")]
+position = Vector2(57, 373)
