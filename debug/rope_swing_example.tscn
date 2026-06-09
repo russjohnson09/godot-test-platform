@@ -1,7 +1,80 @@
 [gd_scene format=3 uid="uid://bf0vt8cjvpes7"]
 
 [ext_resource type="Script" uid="uid://dtw6kodsjqeqy" path="res://debug/rope_swing_example.gd" id="1_70mvb"]
+[ext_resource type="PackedScene" uid="uid://cjiej612d285b" path="res://objects/soccer_ball.tscn" id="2_g71hf"]
+[ext_resource type="TileSet" uid="uid://cc1pgax7wr6k8" path="res://tileset/debug.tres" id="3_3dcnn"]
+[ext_resource type="PackedScene" uid="uid://cppg82oje45if" path="res://hello/object/box_static.tscn" id="4_gjshs"]
+[ext_resource type="PackedScene" uid="uid://bgpypckk6nbrq" path="res://animations/big_challenges.tscn" id="5_j6jbg"]
 
 [node name="RopeSwingExample" type="Node2D" unique_id=2001886377]
-position = Vector2(219, 31)
 script = ExtResource("1_70mvb")
+
+[node name="SoccerBall" parent="." unique_id=467698717 instance=ExtResource("2_g71hf")]
+position = Vector2(273, 146)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=766283939]
+tile_set = ExtResource("3_3dcnn")
+format = 2
+layer_0/tile_data = PackedInt32Array(1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1245220, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245225, 0, 0, 1245226, 0, 0, 1245227, 0, 0, 1245228, 0, 0, 1310684, 0, 0, 1310683, 0, 0, 1245146, 0, 0, 1245145, 0, 0, 1245144, 0, 0, 1245143, 0, 0, 1245142, 0, 0, 1245141, 0, 0, 1245140, 0, 0, 1245139, 0, 0, 1245138, 0, 0, 1245137, 0, 0, 1245136, 0, 0, 1179599, 0, 0, 1114062, 0, 0, 1048526, 0, 0, 982989, 0, 0, 917453, 0, 0, 851917, 0, 0, 851916, 0, 0)
+
+[node name="SoccerBall2" parent="." unique_id=442086178 instance=ExtResource("2_g71hf")]
+position = Vector2(358, 54)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=2005786808]
+position = Vector2(359, 54)
+node_a = NodePath("../SoccerBall")
+node_b = NodePath("../SoccerBall2")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=336985058]
+position = Vector2(542, 54)
+node_a = NodePath("StaticBody2D")
+node_b = NodePath("SoccerBall3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PinJoint2D2" unique_id=97578541]
+
+[node name="SoccerBall3" parent="PinJoint2D2" unique_id=1565819778 instance=ExtResource("2_g71hf")]
+position = Vector2(-50, 81)
+
+[node name="SoccerBall3" parent="." unique_id=1517882632 instance=ExtResource("2_g71hf")]
+position = Vector2(144, 239)
+enable_player_control = true
+
+[node name="Camera2D" type="Camera2D" parent="SoccerBall3" unique_id=10178086]
+limit_top = 0
+limit_bottom = 500
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="SoccerBall3" unique_id=473825381]
+
+[node name="Box" parent="." unique_id=1955547943 instance=ExtResource("4_gjshs")]
+position = Vector2(65, 178)
+
+[node name="Box2" parent="." unique_id=338386770 instance=ExtResource("4_gjshs")]
+position = Vector2(586, 152)
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="." unique_id=857722959]
+position = Vector2(586, 152)
+node_a = NodePath("../Box2")
+node_b = NodePath("../SoccerBall4")
+
+[node name="SoccerBall4" parent="." unique_id=1785875019 instance=ExtResource("2_g71hf")]
+position = Vector2(704, 109)
+
+[node name="Box3" parent="." unique_id=628938632 instance=ExtResource("4_gjshs")]
+position = Vector2(-128, 175)
+
+[node name="Box4" parent="." unique_id=326745485 instance=ExtResource("4_gjshs")]
+position = Vector2(-273, 180)
+
+[node name="Box5" parent="." unique_id=213446574 instance=ExtResource("4_gjshs")]
+position = Vector2(-369, 180)
+
+[node name="Box4" parent="Box5" unique_id=1688918481 instance=ExtResource("4_gjshs")]
+position = Vector2(-136, -5)
+
+[node name="BigChallenges" parent="." unique_id=981738332 instance=ExtResource("5_j6jbg")]
+position = Vector2(-808, 138)
+
+[node name="BigChallenges2" parent="." unique_id=567139776 instance=ExtResource("5_j6jbg")]
+position = Vector2(-39, 107)
+
+[connection signal="screen_exited" from="SoccerBall3/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

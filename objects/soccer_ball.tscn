@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cjiej612d285b"]
+
+[ext_resource type="Texture2D" uid="uid://dg6bmhtn0xk6e" path="res://assets/wikimedia_commons/Soccer_Ball_-_The_Noun_Project.svg" id="1_lx3ir"]
+[ext_resource type="Script" uid="uid://lwv5thansdm1" path="res://objects/soccer_ball.gd" id="1_ww6xw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3dcnn"]
+radius = 45.0
+
+[node name="SoccerBall" type="RigidBody2D" unique_id=1785875019]
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("1_ww6xw")
+
+[node name="SoccerBallTheNounProject" type="Sprite2D" parent="." unique_id=1503221861]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lx3ir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=114566439]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_3dcnn")
+
+[node name="GrappleDetection" type="RayCast2D" parent="." unique_id=1671143567]
+target_position = Vector2(0, 150)
