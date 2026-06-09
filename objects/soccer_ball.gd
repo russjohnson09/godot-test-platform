@@ -2,6 +2,8 @@ extends RigidBody2D
 #extends CharacterBody2D
 
 
+signal  grapple
+
 @export var enable_player_control = false
 
 
@@ -50,7 +52,7 @@ func add_grapple():
 			print(pin_point.position)
 			print(pin_point.global_position)
 			
-			#print(pin_point.)
+			emit_signal("grapple")
 
 	pass
 

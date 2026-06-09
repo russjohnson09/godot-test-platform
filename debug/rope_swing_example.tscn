@@ -5,37 +5,27 @@
 [ext_resource type="TileSet" uid="uid://cc1pgax7wr6k8" path="res://tileset/debug.tres" id="3_3dcnn"]
 [ext_resource type="PackedScene" uid="uid://cppg82oje45if" path="res://hello/object/box_static.tscn" id="4_gjshs"]
 [ext_resource type="PackedScene" uid="uid://bgpypckk6nbrq" path="res://animations/big_challenges.tscn" id="5_j6jbg"]
+[ext_resource type="AudioStream" uid="uid://bpfshmdrj5mah" path="res://assets/mp3/ah_les_crocodiles.mp3" id="6_vissj"]
 
 [node name="RopeSwingExample" type="Node2D" unique_id=2001886377]
 script = ExtResource("1_70mvb")
 
-[node name="SoccerBall" parent="." unique_id=467698717 instance=ExtResource("2_g71hf")]
-position = Vector2(273, 146)
-
 [node name="TileMap" type="TileMap" parent="." unique_id=766283939]
 tile_set = ExtResource("3_3dcnn")
 format = 2
-layer_0/tile_data = PackedInt32Array(1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1245220, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245225, 0, 0, 1245226, 0, 0, 1245227, 0, 0, 1245228, 0, 0, 1310684, 0, 0, 1310683, 0, 0, 1245146, 0, 0, 1245145, 0, 0, 1245144, 0, 0, 1245143, 0, 0, 1245142, 0, 0, 1245141, 0, 0, 1245140, 0, 0, 1245139, 0, 0, 1245138, 0, 0, 1245137, 0, 0, 1245136, 0, 0, 1179599, 0, 0, 1114062, 0, 0, 1048526, 0, 0, 982989, 0, 0, 917453, 0, 0, 851917, 0, 0, 851916, 0, 0)
-
-[node name="SoccerBall2" parent="." unique_id=442086178 instance=ExtResource("2_g71hf")]
-position = Vector2(358, 54)
+layer_0/tile_data = PackedInt32Array(1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1245220, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245225, 0, 0, 1245226, 0, 0, 1245227, 0, 0, 1245228, 0, 0, 1310684, 0, 0, 1310683, 0, 0, 1245146, 0, 0, 1245145, 0, 0, 1245144, 0, 0, 1245143, 0, 0, 1245142, 0, 0, 1245141, 0, 0, 1245140, 0, 0, 1245139, 0, 0, 1245138, 0, 0, 1245137, 0, 0, 1245136, 0, 0, 1179599, 0, 0, 1114062, 0, 0, 1048526, 0, 0, 982989, 0, 0, 917453, 0, 0, 851917, 0, 0, 851916, 0, 0, 1245229, 0, 0, 1245230, 0, 0, 1245231, 0, 0, 1245232, 0, 0, 1245233, 0, 0, 1245234, 0, 0, 1245235, 0, 0, 1245236, 0, 0, 1245237, 0, 0, 1245238, 0, 0, 1245239, 0, 0, 1245240, 0, 0, 1245241, 0, 0, 1245242, 0, 0, 1245243, 0, 0, 1245244, 0, 0, 1245245, 0, 0, 1245246, 0, 0, 1245247, 0, 0, 1245248, 0, 0, 1245249, 0, 0, 1245250, 0, 0, 1245251, 0, 0, 1245252, 0, 0, 1245253, 0, 0, 1245254, 0, 0, 1245255, 0, 0, 1245256, 0, 0, 1245257, 0, 0, 1245258, 0, 0, 1245259, 0, 0, 1245260, 0, 0, 1245261, 0, 0, 1245262, 0, 0, 1245263, 0, 0, 1245264, 0, 0, 1245265, 0, 0, 1245266, 0, 0, 1245267, 0, 0, 1245268, 0, 0, 1245269, 0, 0, 1245270, 0, 0, 1245271, 0, 0, 1245272, 0, 0, 1245273, 0, 0, 1245274, 0, 0, 1245275, 0, 0, 1245276, 0, 0, 1245277, 0, 0, 1245278, 0, 0, 1245279, 0, 0, 1245280, 0, 0, 1245281, 0, 0, 1245282, 0, 0, 1245283, 0, 0, 1245284, 0, 0, 1245285, 0, 0, 1245286, 0, 0, 1245287, 0, 0, 1245288, 0, 0, 1245289, 0, 0, 1179754, 0, 0, 1179755, 0, 0, 1179756, 0, 0, 1179757, 0, 0, 1114222, 0, 0, 1114223, 0, 0, 1114224, 0, 0, 1114225, 0, 0, 1114226, 0, 0, 1048691, 0, 0, 1048692, 0, 0, 1048693, 0, 0, 983158, 0, 0, 983159, 0, 0, 983160, 0, 0, 983161, 0, 0, 983162, 0, 0, 917627, 0, 0, 917628, 0, 0, 917629, 0, 0, 917630, 0, 0, 852095, 0, 0, 852096, 0, 0, 786561, 0, 0, 786562, 0, 0, 721027, 0, 0, 721028, 0, 0)
 
 [node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=2005786808]
-position = Vector2(359, 54)
-node_a = NodePath("../SoccerBall")
-node_b = NodePath("../SoccerBall2")
+position = Vector2(291, -148)
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=336985058]
-position = Vector2(542, 54)
+position = Vector2(474, -148)
 node_a = NodePath("StaticBody2D")
-node_b = NodePath("SoccerBall3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="PinJoint2D2" unique_id=97578541]
 
-[node name="SoccerBall3" parent="PinJoint2D2" unique_id=1565819778 instance=ExtResource("2_g71hf")]
-position = Vector2(-50, 81)
-
 [node name="SoccerBall3" parent="." unique_id=1517882632 instance=ExtResource("2_g71hf")]
+z_index = -10
 position = Vector2(144, 239)
 enable_player_control = true
 
@@ -45,19 +35,24 @@ limit_bottom = 500
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="SoccerBall3" unique_id=473825381]
 
+[node name="BigChallenges10" parent="SoccerBall3" unique_id=981738332 instance=ExtResource("5_j6jbg")]
+z_index = 50
+position = Vector2(2, -10)
+scale = Vector2(0.75, 0.75)
+
 [node name="Box" parent="." unique_id=1955547943 instance=ExtResource("4_gjshs")]
 position = Vector2(65, 178)
 
 [node name="Box2" parent="." unique_id=338386770 instance=ExtResource("4_gjshs")]
-position = Vector2(586, 152)
+position = Vector2(539, -28)
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="." unique_id=857722959]
-position = Vector2(586, 152)
+position = Vector2(539, -31)
 node_a = NodePath("../Box2")
 node_b = NodePath("../SoccerBall4")
 
 [node name="SoccerBall4" parent="." unique_id=1785875019 instance=ExtResource("2_g71hf")]
-position = Vector2(704, 109)
+position = Vector2(657, -74)
 
 [node name="Box3" parent="." unique_id=628938632 instance=ExtResource("4_gjshs")]
 position = Vector2(-128, 175)
@@ -71,10 +66,69 @@ position = Vector2(-369, 180)
 [node name="Box4" parent="Box5" unique_id=1688918481 instance=ExtResource("4_gjshs")]
 position = Vector2(-136, -5)
 
-[node name="BigChallenges" parent="." unique_id=981738332 instance=ExtResource("5_j6jbg")]
+[node name="BigChallenges" parent="." unique_id=1739168415 instance=ExtResource("5_j6jbg")]
 position = Vector2(-808, 138)
 
 [node name="BigChallenges2" parent="." unique_id=567139776 instance=ExtResource("5_j6jbg")]
 position = Vector2(-39, 107)
 
+[node name="BigChallenges3" parent="." unique_id=1567939500 instance=ExtResource("5_j6jbg")]
+position = Vector2(325, 114)
+metadata/_edit_group_ = true
+
+[node name="Box" parent="BigChallenges3" unique_id=916207589 instance=ExtResource("4_gjshs")]
+z_index = -1
+position = Vector2(-7, 10)
+
+[node name="BigChallenges4" parent="." unique_id=1893030784 instance=ExtResource("5_j6jbg")]
+position = Vector2(325, 114)
+metadata/_edit_group_ = true
+
+[node name="Box" parent="BigChallenges4" unique_id=403314014 instance=ExtResource("4_gjshs")]
+z_index = -1
+position = Vector2(-7, 10)
+
+[node name="BigChallenges5" parent="." unique_id=309919441 instance=ExtResource("5_j6jbg")]
+position = Vector2(1172, 98)
+metadata/_edit_group_ = true
+
+[node name="Box" parent="BigChallenges5" unique_id=2124854595 instance=ExtResource("4_gjshs")]
+z_index = -1
+position = Vector2(-7, 10)
+
+[node name="BigChallenges6" parent="." unique_id=1396116257 instance=ExtResource("5_j6jbg")]
+position = Vector2(943, 106)
+metadata/_edit_group_ = true
+
+[node name="Box" parent="BigChallenges6" unique_id=101045309 instance=ExtResource("4_gjshs")]
+z_index = -1
+position = Vector2(-7, 10)
+
+[node name="BigChallenges7" parent="." unique_id=545784775 instance=ExtResource("5_j6jbg")]
+position = Vector2(709, 105)
+metadata/_edit_group_ = true
+
+[node name="Box" parent="BigChallenges7" unique_id=810719041 instance=ExtResource("4_gjshs")]
+z_index = -1
+position = Vector2(-7, 10)
+
+[node name="BigChallenges8" parent="." unique_id=2074097287 instance=ExtResource("5_j6jbg")]
+position = Vector2(522, 103)
+metadata/_edit_group_ = true
+
+[node name="Box" parent="BigChallenges8" unique_id=1194415367 instance=ExtResource("4_gjshs")]
+z_index = -1
+position = Vector2(-7, 10)
+
+[node name="BigChallenges9" parent="." unique_id=1883714940 instance=ExtResource("5_j6jbg")]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(1700.0001, 68.99997)
+scale = Vector2(3, 3)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BigChallenges9" unique_id=600294751]
+position = Vector2(-10.899902, 11.599998)
+scale = Vector2(0.099999994, 0.099999994)
+stream = ExtResource("6_vissj")
+
+[connection signal="grapple" from="SoccerBall3" to="." method="_on_soccer_ball_3_grapple"]
 [connection signal="screen_exited" from="SoccerBall3/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -24,3 +24,10 @@ func _input(event):
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	get_tree().reload_current_scene()
 	pass # Replace with function body.
+
+
+func _on_soccer_ball_3_grapple() -> void:
+	
+	if not $BigChallenges9/AudioStreamPlayer2D.playing:
+		$BigChallenges9/AudioStreamPlayer2D.play()
+	pass # Replace with function body.
