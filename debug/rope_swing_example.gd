@@ -30,4 +30,10 @@ func _on_soccer_ball_3_grapple() -> void:
 	
 	if not $BigChallenges9/AudioStreamPlayer2D.playing:
 		$BigChallenges9/AudioStreamPlayer2D.play()
+		$BigChallenges9/AnimationPlayer.play("new_animation")
+	pass # Replace with function body.
+
+
+func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
+	_on_soccer_ball_3_grapple()
 	pass # Replace with function body.

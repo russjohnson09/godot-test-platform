@@ -7,6 +7,68 @@
 [ext_resource type="PackedScene" uid="uid://bgpypckk6nbrq" path="res://animations/big_challenges.tscn" id="5_j6jbg"]
 [ext_resource type="AudioStream" uid="uid://bpfshmdrj5mah" path="res://assets/mp3/ah_les_crocodiles.mp3" id="6_vissj"]
 
+[sub_resource type="Animation" id="Animation_vissj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ah_les_crocodiles:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Un crocodile, s'en allant à la guerre
+Disait au revoir à ses petits enfants
+Traînant ses pieds, ses pieds dans la poussière
+Il s'en allait combattre les éléphants"]
+}
+
+[sub_resource type="Animation" id="Animation_bo042"]
+resource_name = "new_animation"
+length = 190.0
+step = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ah_les_crocodiles:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15, 33, 50, 65, 84, 102, 120, 138, 156, 172),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["(musique)", "Un crocodile, s'en allant à la guerre
+Disait au revoir à ses petits enfants
+Traînant ses pieds, ses pieds dans la poussière
+Il s'en allait combattre les éléphants", "Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus
+Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus", "(musique)", "Il fredonnait une marche militaire
+Dont il mâchait les mots à grosses dents
+Quand il ouvrait la gueule tout entière
+On croyait voir ses ennemis dedans", "Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus
+Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus", "(musique)", "Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus
+Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus", "Un éléphant parut et sur la terre
+Se prépara ce combat de géant
+Mais près de là, coulait une rivière
+Le crocodile s'y jeta subitement", "Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus
+Ah ! Les crocrocro, les crocrocro, les crocodiles
+Sur les bords du Nil, ils sont partis n'en parlons plus", "(musique)"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eiwn8"]
+_data = {
+&"RESET": SubResource("Animation_vissj"),
+&"new_animation": SubResource("Animation_bo042")
+}
+
 [node name="RopeSwingExample" type="Node2D" unique_id=2001886377]
 script = ExtResource("1_70mvb")
 
@@ -121,7 +183,6 @@ z_index = -1
 position = Vector2(-7, 10)
 
 [node name="BigChallenges9" parent="." unique_id=1883714940 instance=ExtResource("5_j6jbg")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(1700.0001, 68.99997)
 scale = Vector2(3, 3)
 
@@ -130,5 +191,44 @@ position = Vector2(-10.899902, 11.599998)
 scale = Vector2(0.099999994, 0.099999994)
 stream = ExtResource("6_vissj")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BigChallenges9" unique_id=692986136]
+libraries/ = SubResource("AnimationLibrary_eiwn8")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="BigChallenges9" unique_id=1158868861]
+
+[node name="Crocodile" type="RichTextLabel" parent="." unique_id=1590994630]
+offset_left = 46.0
+offset_top = 6.0
+offset_right = 338.0
+offset_bottom = 81.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Crocodile
+ビッグチャレンジ
+"
+scroll_active = false
+
+[node name="Crocodile2" type="RichTextLabel" parent="." unique_id=385366249]
+offset_left = 1220.0
+offset_top = -1.0
+offset_right = 1713.0
+offset_bottom = 153.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Big Challenges
+ビッグチャレンジ
+"
+
+[node name="ah_les_crocodiles" type="RichTextLabel" parent="." unique_id=877613281]
+offset_left = 1530.0
+offset_top = 329.0
+offset_right = 2778.0
+offset_bottom = 916.0
+scale = Vector2(0.25, 0.25)
+theme_override_font_sizes/normal_font_size = 50
+text = "Un crocodile, s'en allant à la guerre
+Disait au revoir à ses petits enfants
+Traînant ses pieds, ses pieds dans la poussière
+Il s'en allait combattre les éléphants"
+
 [connection signal="grapple" from="SoccerBall3" to="." method="_on_soccer_ball_3_grapple"]
 [connection signal="screen_exited" from="SoccerBall3/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="screen_entered" from="BigChallenges9/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
