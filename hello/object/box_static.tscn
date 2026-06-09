@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cppg82oje45if"]
+
+[ext_resource type="Texture2D" uid="uid://c30pi5m3wc88i" path="res://level/long_obstacle.png" id="1_nvaw1"]
+
+[sub_resource type="RectangleShape2D" id="12"]
+size = Vector2(16, 16)
+
+[node name="Box" type="StaticBody2D" unique_id=1955547943]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1420322559]
+texture = ExtResource("1_nvaw1")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=279760830]
+shape = SubResource("12")

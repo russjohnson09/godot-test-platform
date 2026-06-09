@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b3jjoyw0qkol3"]
+
+[ext_resource type="Script" uid="uid://d0m0kvu32pjf4" path="res://objects/moving/moving_platform_horizontal.gd" id="1_y0ycm"]
+[ext_resource type="Texture2D" uid="uid://denyomy7vetvv" path="res://icon.svg" id="2_d1lyg"]
+
+[sub_resource type="Curve2D" id="Curve2D_v1jlk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 114, 0, 0, 0, 0, 0, 18, 0)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bctmu"]
+size = Vector2(126, 128)
+
+[node name="MovingPlatformHorizontal" type="Node2D" unique_id=1354338686]
+
+[node name="MovingPlatformHorizontal" type="Path2D" parent="." unique_id=1148700567]
+curve = SubResource("Curve2D_v1jlk")
+script = ExtResource("1_y0ycm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MovingPlatformHorizontal" unique_id=387739056]
+position = Vector2(114, 0)
+rotates = false
+loop = false
+
+[node name="MovingPlatformHorizontal" type="CharacterBody2D" parent="MovingPlatformHorizontal/PathFollow2D" unique_id=918054320]
+
+[node name="Icon2" type="Sprite2D" parent="MovingPlatformHorizontal/PathFollow2D/MovingPlatformHorizontal" unique_id=1609411634]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_d1lyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatformHorizontal/PathFollow2D/MovingPlatformHorizontal" unique_id=238395670]
+visible = false
+position = Vector2(-3, -2)
+shape = SubResource("RectangleShape2D_bctmu")

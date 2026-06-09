@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://k5y6oc1t375o"]
+
+[ext_resource type="Texture2D" uid="uid://ck6funocmdo8x" path="res://assets/debug/player.png" id="1_xvnjx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c55gx"]
+size = Vector2(4.5, 5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xvnjx"]
+radius = 8.0
+
+[node name="BoxRigid" type="RigidBody2D" unique_id=480543624]
+lock_rotation = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=124494544]
+position = Vector2(-29, 4)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_c55gx")
+one_way_collision = true
+
+[node name="Block" type="Sprite2D" parent="." unique_id=1003599149]
+modulate = Color(0.039215688, 0.8509804, 0.25490198, 1)
+texture = ExtResource("1_xvnjx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=279760830]
+shape = SubResource("CircleShape2D_xvnjx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=487693646]
+position = Vector2(28, 3)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_c55gx")
+one_way_collision = true

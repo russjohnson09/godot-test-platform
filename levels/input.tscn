@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://63f8a6am06cs"]
+
+[ext_resource type="Script" uid="uid://cc0i8wppl5c04" path="res://levels/input.gd" id="1_qufqt"]
+[ext_resource type="Texture2D" uid="uid://rg70tphg55dw" path="res://hello/level/circle.png" id="2_c7phq"]
+
+[node name="Input" type="Node2D" unique_id=1057886849]
+script = ExtResource("1_qufqt")
+
+[node name="Jump" type="TouchScreenButton" parent="." unique_id=1145658204]
+position = Vector2(813, 403.00003)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("2_c7phq")
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Jump" unique_id=1014597476]
+anchors_preset = -1
+anchor_right = 2.182869
+anchor_bottom = 1.6409359
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 59.0
+scale = Vector2(0.195, 0.195)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "JUMP"
+metadata/_edit_use_anchors_ = true
+
+[node name="Right" type="TouchScreenButton" parent="." unique_id=249265845]
+position = Vector2(193.00002, 405.00003)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("2_c7phq")
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Right" unique_id=1234272594]
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 323.09967
+offset_bottom = 186.81189
+scale = Vector2(0.195, 0.195)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "RIGHT"
+
+[node name="Left" type="TouchScreenButton" parent="." unique_id=310483469]
+position = Vector2(44, 405.99997)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("2_c7phq")
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Left" unique_id=527709721]
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 222.85715
+offset_bottom = 146.33337
+scale = Vector2(0.195, 0.195)
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "LEFT"
