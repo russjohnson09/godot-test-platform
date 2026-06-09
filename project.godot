@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="godot-test-platform"
-run/main_scene="uid://rfq34rb7linl"
+run/main_scene="uid://bf0vt8cjvpes7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/use_filter=false
 config/icon="uid://cqg3hafxba2a8"

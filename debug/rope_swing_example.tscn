@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bf0vt8cjvpes7"]
+
+[ext_resource type="Script" uid="uid://dtw6kodsjqeqy" path="res://debug/rope_swing_example.gd" id="1_70mvb"]
+
+[node name="RopeSwingExample" type="Node2D" unique_id=2001886377]
+position = Vector2(219, 31)
+script = ExtResource("1_70mvb")
